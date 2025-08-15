@@ -1,0 +1,50 @@
+# Composer
+/vendor/
+composer.lock
+
+# PHPUnit
+/.phpunit.cache
+/phpunit.xml
+/.phpunit.result.cache
+
+# IDE and Editor files
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Runtime files
+*.pid
+*.seed
+*.tmp
+
+# Coverage reports
+/coverage/
+/clover.xml
+/coverage.xml
+
+# Build artifacts
+/build/
+/dist/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+/tmp/
+*.temp 

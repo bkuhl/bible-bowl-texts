@@ -1,0 +1,72 @@
+{
+    "id": "16",
+    "name": "2025 Fall",
+    "text": {
+        "ranges": [
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 16
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 24
+                }
+            },
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 26
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 31
+                }
+            }
+        ]
+    },
+    "blocks": {
+        "1": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 16
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 19
+                    }
+                }
+            ]
+        },
+        "2": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 20
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 24
+                    }
+                }
+            ]
+        },
+        "3": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 26
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 31
+                    }
+                }
+            ]
+        }
+    }
+}
