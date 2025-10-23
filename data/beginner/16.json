@@ -1,0 +1,246 @@
+{
+    "id": "16",
+    "name": "2025 Fall",
+    "text": {
+        "ranges": [
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 16
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 16,
+                    "verse": 13
+                }
+            },
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 17
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 17
+                }
+            },
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 18
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 18,
+                    "verse": 9
+                }
+            },
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 26
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 26
+                }
+            },
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 27
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 27
+                }
+            },
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 29
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 29
+                }
+            },
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 30
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 30,
+                    "verse": 15
+                }
+            },
+            {
+                "start": {
+                    "book": 9,
+                    "chapter": 31
+                },
+                "end": {
+                    "book": 9,
+                    "chapter": 31,
+                    "verse": 6
+                }
+            }
+        ]
+    },
+    "blocks": {
+        "1": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 16
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 16,
+                        "verse": 13
+                    }
+                },
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 17
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 17
+                    }
+                },
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 18
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 18,
+                        "verse": 9
+                    }
+                }
+            ]
+        },
+        "2": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 26
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 26
+                    }
+                },
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 27
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 27
+                    }
+                },
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 29
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 29
+                    }
+                },
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 30
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 30,
+                        "verse": 15
+                    }
+                },
+                {
+                    "start": {
+                        "book": 9,
+                        "chapter": 31
+                    },
+                    "end": {
+                        "book": 9,
+                        "chapter": 31,
+                        "verse": 6
+                    }
+                }
+            ]
+        }
+    },
+    "memory_verses": {
+        "books": {
+            "9": {
+                "chapters": {
+                    "16": {
+                        "verses": [
+                            7,
+                            13
+                        ]
+                    },
+                    "17": {
+                        "verses": [
+                            4,
+                            10,
+                            26,
+                            32,
+                            36,
+                            37,
+                            45,
+                            47,
+                            50
+                        ]
+                    },
+                    "18": {
+                        "verses": [
+                            1
+                        ]
+                    },
+                    "26": {
+                        "verses": [
+                            9,
+                            10,
+                            11,
+                            23,
+                            24,
+                            25
+                        ]
+                    },
+                    "27": {
+                        "verses": [
+                            12
+                        ]
+                    },
+                    "30": {
+                        "verses": [
+                            4,
+                            6,
+                            19,
+                            23
+                        ]
+                    },
+                    "31": {
+                        "verses": [
+                            6
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
