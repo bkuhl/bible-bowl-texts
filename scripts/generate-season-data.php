@@ -81,17 +81,17 @@ $teamSeasonData = [
                 'chapters' => [
                     16 => [
                         'verses' => [
-                            1 => ['lead_in' => 'what the LORD said to Samuel', 'split_after_word' => 27],
-                            7 => ['lead_in' => 'about what the LORD sees', 'split_after_word' => 23],
-                            13 => ['lead_in' => 'about when Samuel anointed David', 'split_after_word' => 19],
-                            18 => ['lead_in' => 'what one of the young men said about David', 'split_after_word' => 24],
+                            1 => ['lead_in' => 'what the LORD said to Samuel', 'split_after_word' => 23],
+                            7 => ['lead_in' => 'about what the LORD sees', 'split_after_word' => 20],
+                            13 => ['lead_in' => 'about when Samuel anointed David', 'split_after_word' => 16],
+                            18 => ['lead_in' => 'what one of the young men said about David', 'split_after_word' => 22],
                         ]
                     ],
                     17 => [
                         'verses' => [
-                            26 => ['lead_in' => 'when David spoke to the men who were standing with him', 'split_after_word' => 33],
-                            36 => ['lead_in' => 'what David said this uncircumcised Philistine will be', 'split_after_word' => 19],
-                            37 => ['lead_in' => 'what David said about the LORD rescuing him', 'split_after_word' => 26],
+                            26 => ['lead_in' => 'when David spoke to the men who were standing with him', 'split_after_word' => 27],
+                            36 => ['lead_in' => 'what David said this uncircumcised Philistine will be', 'split_after_word' => 16],
+                            37 => ['lead_in' => 'what David said about the LORD rescuing him', 'split_after_word' => 20],
                             45 => ['lead_in' => 'about how David said he came against the Philistine', 'split_after_word' => 22],
                             46 => ['lead_in' => 'what David told the Philistine would happen today', 'split_after_word' => 24],
                             47 => ['lead_in' => 'what David said this whole assembly will know', 'split_after_word' => 22],
@@ -106,20 +106,20 @@ $teamSeasonData = [
                     ],
                     19 => [
                         'verses' => [
-                            4 => ['lead_in' => 'when Jonathan spoke well of David', 'split_after_word' => 29],
-                            5 => ['lead_in' => 'what Jonathan said David did', 'split_after_word' => 30],
+                            4 => ['lead_in' => 'when Jonathan spoke well of David', 'split_after_word' => 22],
+                            5 => ['lead_in' => 'what Jonathan said David did', 'split_after_word' => 24],
                         ]
                     ],
                     20 => [
                         'verses' => [
-                            42 => ['lead_in' => 'how Jonathan told David to go', 'split_after_word' => 23],
+                            42 => ['lead_in' => 'how Jonathan told David to go', 'split_after_word' => 20],
                         ]
                     ],
                     22 => [
                         'verses' => [
-                            2 => ['lead_in' => 'about who rallied around David', 'split_after_word' => 15],
-                            14 => ['lead_in' => 'what Ahimelech said about David', 'split_after_word' => 17],
-                            17 => ['lead_in' => 'about what the king\'s servants would not do', 'split_after_word' => 23],
+                            2 => ['lead_in' => 'about who rallied around David', 'split_after_word' => 14],
+                            14 => ['lead_in' => 'what Ahimelech said about David', 'split_after_word' => 15],
+                            17 => ['lead_in' => 'about what the king\'s servants would not do', 'split_after_word' => 22],
                         ]
                     ],
                     23 => [
@@ -131,41 +131,41 @@ $teamSeasonData = [
                         'verses' => [
                             5 => ['lead_in' => 'about David\'s conscience', 'split_after_word' => 5],
                             6 => ['lead_in' => 'about what David said he would never do', 'split_after_word' => 24],
-                            10 => ['lead_in' => 'about what someone advised David to do', 'split_after_word' => 23],
+                            10 => ['lead_in' => 'about what someone advised David to do', 'split_after_word' => 19],
                             12 => ['lead_in' => 'what David said for the LORD to do to Saul', 'split_after_word' => 8],
                             13 => ['lead_in' => 'about the old proverb', 'split_after_word' => 10],
                             14 => ['lead_in' => 'what David asked Saul chasing after', 'split_after_word' => 9],
                             17 => ['lead_in' => 'what Saul said after he wept aloud', 'split_after_word' => 10],
                             19 => ['lead_in' => 'what Saul said about the LORD repaying', 'split_after_word' => 12],
                             20 => ['lead_in' => 'what Saul said he knew for certain', 'split_after_word' => 10],
-                            21 => ['lead_in' => 'what Saul told David to swear to him', 'split_after_word' => 18],
+                            21 => ['lead_in' => 'what Saul told David to swear to him', 'split_after_word' => 15],
                         ]
                     ],
                     26 => [
                         'verses' => [
                             9 => ['lead_in' => 'what David told Abishai not do to', 'split_after_word' => 8],
-                            10 => ['lead_in' => 'what David told Abishai would happen to Saul', 'split_after_word' => 16],
-                            11 => ['lead_in' => 'what David told Abishai he would never do', 'split_after_word' => 21],
-                            19 => ['lead_in' => 'when David said people should be cursed', 'split_after_word' => 34],
-                            21 => ['lead_in' => 'when Saul said he had sinned', 'split_after_word' => 19],
-                            23 => ['lead_in' => 'about what David wasn\'t willing to do', 'split_after_word' => 13],
+                            10 => ['lead_in' => 'what David told Abishai would happen to Saul', 'split_after_word' => 13],
+                            11 => ['lead_in' => 'what David told Abishai he would never do', 'split_after_word' => 17],
+                            19 => ['lead_in' => 'when David said people should be cursed', 'split_after_word' => 30],
+                            21 => ['lead_in' => 'when Saul said he had sinned', 'split_after_word' => 16],
+                            23 => ['lead_in' => 'about what David wasn\'t willing to do', 'split_after_word' => 12],
                             24 => ['lead_in' => 'what David said to Saul about life being valuable', 'split_after_word' => 8],
-                            25 => ['lead_in' => 'when Saul said David was blessed', 'split_after_word' => 22],
+                            25 => ['lead_in' => 'when Saul said David was blessed', 'split_after_word' => 20],
                         ]
                     ],
                     28 => [
                         'verses' => [
-                            3 => ['lead_in' => 'about when Samuel had died', 'split_after_word' => 23],
-                            16 => ['lead_in' => 'what Samuel asked Saul', 'split_after_word' => 13],
-                            17 => ['lead_in' => 'what Samuel told Saul the LORD had done', 'split_after_word' => 13],
-                            18 => ['lead_in' => 'what Samuel told Saul he had not done', 'split_after_word' => 21],
-                            19 => ['lead_in' => 'what Samuel told Saul would happen to him', 'split_after_word' => 16],
+                            3 => ['lead_in' => 'about when Samuel had died', 'split_after_word' => 19],
+                            16 => ['lead_in' => 'what Samuel asked Saul', 'split_after_word' => 10],
+                            17 => ['lead_in' => 'what Samuel told Saul the LORD had done', 'split_after_word' => 11],
+                            18 => ['lead_in' => 'what Samuel told Saul he had not done', 'split_after_word' => 16],
+                            19 => ['lead_in' => 'what Samuel told Saul would happen to him', 'split_after_word' => 13],
                         ]
                     ],
                     30 => [
                         'verses' => [
-                            6 => ['lead_in' => 'about when the troops were all very bitter', 'split_after_word' => 17],
-                            23 => ['lead_in' => 'what David said to corrupt and worthless men', 'split_after_word' => 20],
+                            6 => ['lead_in' => 'about when the troops were all very bitter', 'split_after_word' => 14],
+                            23 => ['lead_in' => 'what David said to corrupt and worthless men', 'split_after_word' => 17],
                         ]
                     ],
                 ]
@@ -190,36 +190,36 @@ $beginnerSeasonData = [
                 'chapters' => [
                     16 => [
                         'verses' => [
-                            7 => ['lead_in' => 'about what the LORD sees', 'split_after_word' => 23],
-                            13 => ['lead_in' => 'about when Samuel anointed David', 'split_after_word' => 19],
+                            7 => ['lead_in' => 'about what the LORD sees', 'split_after_word' => 20],
+                            13 => ['lead_in' => 'about when Samuel anointed David', 'split_after_word' => 16],
                         ]
                     ],
                     17 => [
                         'verses' => [
-                            4 => ['lead_in' => 'about the Philistine champion', 'split_after_word' => 15],
-                            10 => ['lead_in' => 'about what the Philistine said to the Israelites', 'split_after_word' => 12],
-                            26 => ['lead_in' => 'when David spoke to the men who were standing with him', 'split_after_word' => 30],
-                            32 => ['lead_in' => 'what David told Saul not to let anyone be', 'split_after_word' => 13],
-                            36 => ['lead_in' => 'what David said this uncircumcised Philistine will be', 'split_after_word' => 20],
-                            37 => ['lead_in' => 'what David said about the LORD rescuing him', 'split_after_word' => 33],
-                            45 => ['lead_in' => 'about how David said he came against the Philistine', 'split_after_word' => 22],
-                            47 => ['lead_in' => 'what David said this whole assembly will know', 'split_after_word' => 22],
+                            4 => ['lead_in' => 'about the Philistine champion', 'split_after_word' => 13],
+                            10 => ['lead_in' => 'about what the Philistine said to the Israelites', 'split_after_word' => 11],
+                            26 => ['lead_in' => 'when David spoke to the men who were standing with him', 'split_after_word' => 27],
+                            32 => ['lead_in' => 'what David told Saul not to let anyone be', 'split_after_word' => 11],
+                            36 => ['lead_in' => 'what David said this uncircumcised Philistine will be', 'split_after_word' => 16],
+                            37 => ['lead_in' => 'what David said about the LORD rescuing him', 'split_after_word' => 29],
+                            45 => ['lead_in' => 'about how David said he came against the Philistine', 'split_after_word' => 15],
+                            47 => ['lead_in' => 'what David said this whole assembly will know', 'split_after_word' => 19],
                             50 => ['lead_in' => 'about how David defeated the Philistine', 'split_after_word' => 10],
                         ]
                     ],
                     18 => [
                         'verses' => [
-                            1 => ['lead_in' => 'about Jonathan loving David', 'split_after_word' => 17],
+                            1 => ['lead_in' => 'about Jonathan loving David', 'split_after_word' => 15],
                         ]
                     ],
                     26 => [
                         'verses' => [
                             9 => ['lead_in' => 'what David told Abishai not do to', 'split_after_word' => 8],
-                            10 => ['lead_in' => 'what David told Abishai would happen to Saul', 'split_after_word' => 16],
-                            11 => ['lead_in' => 'what David told Abishai he would never do', 'split_after_word' => 21],
-                            23 => ['lead_in' => 'about what David wasn\'t willing to do', 'split_after_word' => 13],
+                            10 => ['lead_in' => 'what David told Abishai would happen to Saul', 'split_after_word' => 13],
+                            11 => ['lead_in' => 'what David told Abishai he would never do', 'split_after_word' => 17],
+                            23 => ['lead_in' => 'about what David wasn\'t willing to do', 'split_after_word' => 12],
                             24 => ['lead_in' => 'what David said to Saul about life being valuable', 'split_after_word' => 8],
-                            25 => ['lead_in' => 'when Saul said David was blessed', 'split_after_word' => 22],
+                            25 => ['lead_in' => 'when Saul said David was blessed', 'split_after_word' => 20],
                         ]
                     ],
                     27 => [
@@ -230,9 +230,9 @@ $beginnerSeasonData = [
                     30 => [
                         'verses' => [
                             4 => ['lead_in' => 'when David wept', 'split_after_word' => 9],
-                            6 => ['lead_in' => 'about when the troops were all very bitter', 'split_after_word' => 17],
-                            19 => ['lead_in' => 'about what was missing', 'split_after_word' => 18],
-                            23 => ['lead_in' => 'what David said to corrupt and worthless men', 'split_after_word' => 20],
+                            6 => ['lead_in' => 'about when the troops were all very bitter', 'split_after_word' => 14],
+                            19 => ['lead_in' => 'about what was missing', 'split_after_word' => 16],
+                            23 => ['lead_in' => 'what David said to corrupt and worthless men', 'split_after_word' => 17],
                         ]
                     ],
                     31 => [
