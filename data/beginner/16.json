@@ -192,11 +192,11 @@
                         "verses": {
                             "7": {
                                 "lead_in": "about what the LORD sees",
-                                "split_after_word": 8
+                                "split_after_word": 23
                             },
                             "13": {
                                 "lead_in": "about when Samuel anointed David",
-                                "split_after_word": 12
+                                "split_after_word": 19
                             }
                         }
                     },
@@ -204,39 +204,39 @@
                         "verses": {
                             "4": {
                                 "lead_in": "about the Philistine champion",
-                                "split_after_word": 6
+                                "split_after_word": 15
                             },
                             "10": {
                                 "lead_in": "about what the Philistine said to the Israelites",
-                                "split_after_word": 8
+                                "split_after_word": 12
                             },
                             "26": {
                                 "lead_in": "when David spoke to the men who were standing with him",
-                                "split_after_word": 10
+                                "split_after_word": 30
                             },
                             "32": {
                                 "lead_in": "what David told Saul not to let anyone be",
-                                "split_after_word": 7
+                                "split_after_word": 13
                             },
                             "36": {
                                 "lead_in": "what David said this uncircumcised Philistine will be",
-                                "split_after_word": 9
+                                "split_after_word": 20
                             },
                             "37": {
                                 "lead_in": "what David said about the LORD rescuing him",
-                                "split_after_word": 8
+                                "split_after_word": 33
                             },
                             "45": {
                                 "lead_in": "about how David said he came against the Philistine",
-                                "split_after_word": 7
+                                "split_after_word": 22
                             },
                             "47": {
                                 "lead_in": "what David said this whole assembly will know",
-                                "split_after_word": 8
+                                "split_after_word": 22
                             },
                             "50": {
                                 "lead_in": "about how David defeated the Philistine",
-                                "split_after_word": 6
+                                "split_after_word": 10
                             }
                         }
                     },
@@ -244,7 +244,7 @@
                         "verses": {
                             "1": {
                                 "lead_in": "about Jonathan loving David",
-                                "split_after_word": 6
+                                "split_after_word": 17
                             }
                         }
                     },
@@ -256,15 +256,15 @@
                             },
                             "10": {
                                 "lead_in": "what David told Abishai would happen to Saul",
-                                "split_after_word": 9
+                                "split_after_word": 16
                             },
                             "11": {
                                 "lead_in": "what David told Abishai he would never do",
-                                "split_after_word": 8
+                                "split_after_word": 21
                             },
                             "23": {
                                 "lead_in": "about what David wasn't willing to do",
-                                "split_after_word": 7
+                                "split_after_word": 13
                             },
                             "24": {
                                 "lead_in": "what David said to Saul about life being valuable",
@@ -272,7 +272,7 @@
                             },
                             "25": {
                                 "lead_in": "when Saul said David was blessed",
-                                "split_after_word": 6
+                                "split_after_word": 22
                             }
                         }
                     },
@@ -280,7 +280,7 @@
                         "verses": {
                             "12": {
                                 "lead_in": "what Achish said about David",
-                                "split_after_word": 6
+                                "split_after_word": 5
                             }
                         }
                     },
@@ -288,19 +288,19 @@
                         "verses": {
                             "4": {
                                 "lead_in": "when David wept",
-                                "split_after_word": 4
+                                "split_after_word": 9
                             },
                             "6": {
                                 "lead_in": "about when the troops were all very bitter",
-                                "split_after_word": 8
+                                "split_after_word": 17
                             },
                             "19": {
                                 "lead_in": "about what was missing",
-                                "split_after_word": 5
+                                "split_after_word": 18
                             },
                             "23": {
                                 "lead_in": "what David said to corrupt and worthless men",
-                                "split_after_word": 7
+                                "split_after_word": 20
                             }
                         }
                     },
@@ -308,7 +308,7 @@
                         "verses": {
                             "6": {
                                 "lead_in": "about when Saul died",
-                                "split_after_word": 4
+                                "split_after_word": 6
                             }
                         }
                     }
