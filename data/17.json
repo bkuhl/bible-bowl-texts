@@ -1,0 +1,303 @@
+{
+    "id": "17",
+    "name": "2026 Spring",
+    "program": "teen",
+    "text": {
+        "ranges": [
+            {
+                "start": {
+                    "book": 45,
+                    "chapter": 1
+                },
+                "end": {
+                    "book": 45,
+                    "chapter": 16
+                }
+            }
+        ]
+    },
+    "blocks": {
+        "1": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 45,
+                        "chapter": 1
+                    },
+                    "end": {
+                        "book": 45,
+                        "chapter": 5
+                    }
+                }
+            ]
+        },
+        "2": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 45,
+                        "chapter": 6
+                    },
+                    "end": {
+                        "book": 45,
+                        "chapter": 10
+                    }
+                }
+            ]
+        },
+        "3": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 45,
+                        "chapter": 11
+                    },
+                    "end": {
+                        "book": 45,
+                        "chapter": 16
+                    }
+                }
+            ]
+        }
+    },
+    "memory_verses": {
+        "books": {
+            "45": {
+                "chapters": {
+                    "1": {
+                        "verses": {
+                            "3-4": {
+                                "lead_in": "about Jesus Christ",
+                                "split_after_word": 18
+                            },
+                            "16": {
+                                "lead_in": "about why Paul is not ashamed",
+                                "split_after_word": 17
+                            },
+                            "17": {
+                                "lead_in": "about what is revealed in the gospel",
+                                "split_after_word": 14
+                            }
+                        }
+                    },
+                    "2": {
+                        "verses": {
+                            "9-11": {
+                                "lead_in": "about favoritism",
+                                "split_after_word": 21
+                            }
+                        }
+                    },
+                    "3": {
+                        "verses": {
+                            "9-10": {
+                                "lead_in": "about who is under sin",
+                                "split_after_word": 24
+                            },
+                            "23-24": {
+                                "lead_in": "about what all have done",
+                                "split_after_word": 12
+                            },
+                            "25": {
+                                "lead_in": "about how Christ was presented",
+                                "split_after_word": 16
+                            },
+                            "26": {
+                                "lead_in": "about why God presented Christ",
+                                "split_after_word": 12
+                            },
+                            "28": {
+                                "lead_in": "about being justified",
+                                "split_after_word": 10
+                            }
+                        }
+                    },
+                    "4": {
+                        "verses": {
+                            "24-25": {
+                                "lead_in": "about what was credited to us",
+                                "split_after_word": 21
+                            }
+                        }
+                    },
+                    "5": {
+                        "verses": {
+                            "1": {
+                                "lead_in": "about peace",
+                                "split_after_word": 9
+                            },
+                            "2": {
+                                "lead_in": "about access",
+                                "split_after_word": 16
+                            },
+                            "5": {
+                                "lead_in": "about hope",
+                                "split_after_word": 16
+                            },
+                            "6": {
+                                "lead_in": "about those for whom Christ died",
+                                "split_after_word": 6
+                            },
+                            "8": {
+                                "lead_in": "about when Christ died",
+                                "split_after_word": 8
+                            }
+                        }
+                    },
+                    "6": {
+                        "verses": {
+                            "4": {
+                                "lead_in": "about baptism",
+                                "split_after_word": 10
+                            },
+                            "6-7": {
+                                "lead_in": "about our old self",
+                                "split_after_word": 33
+                            },
+                            "23": {
+                                "lead_in": "about wages",
+                                "split_after_word": 7
+                            }
+                        }
+                    },
+                    "8": {
+                        "verses": {
+                            "1-2": {
+                                "lead_in": "about condemnation",
+                                "split_after_word": 11
+                            },
+                            "13": {
+                                "lead_in": "about when you will live and die",
+                                "split_after_word": 13
+                            },
+                            "15": {
+                                "lead_in": "about the spirit of adoption",
+                                "split_after_word": 14
+                            },
+                            "18": {
+                                "lead_in": "about sufferings",
+                                "split_after_word": 10
+                            },
+                            "28": {
+                                "lead_in": "about what all things do",
+                                "split_after_word": 15
+                            },
+                            "31-32": {
+                                "lead_in": "about God being for us",
+                                "split_after_word": 18
+                            },
+                            "35,37": {
+                                "lead_in": "about conquerors",
+                                "split_after_word": 23
+                            },
+                            "38-39": {
+                                "lead_in": "about what Paul was persuaded",
+                                "split_after_word": 22
+                            }
+                        }
+                    },
+                    "10": {
+                        "verses": {
+                            "9": {
+                                "lead_in": "about confessing and believing",
+                                "split_after_word": 9
+                            },
+                            "12-13": {
+                                "lead_in": "about who will be saved",
+                                "split_after_word": 22
+                            },
+                            "14": {
+                                "lead_in": "about the need for a preacher",
+                                "split_after_word": 12
+                            },
+                            "15": {
+                                "lead_in": "about sending preachers",
+                                "split_after_word": 9
+                            }
+                        }
+                    },
+                    "11": {
+                        "verses": {
+                            "33": {
+                                "lead_in": "about the depth of God's attributes",
+                                "split_after_word": 15
+                            },
+                            "34-35": {
+                                "lead_in": "about man's inferiority to God",
+                                "split_after_word": 15
+                            },
+                            "36": {
+                                "lead_in": "about what all things are",
+                                "split_after_word": 12
+                            }
+                        }
+                    },
+                    "12": {
+                        "verses": {
+                            "1": {
+                                "lead_in": "about living sacrifices",
+                                "split_after_word": 11
+                            },
+                            "2": {
+                                "lead_in": "about being transformed",
+                                "split_after_word": 16
+                            },
+                            "9-10": {
+                                "lead_in": "about love",
+                                "split_after_word": 12
+                            },
+                            "21": {
+                                "lead_in": "about good and evil",
+                                "split_after_word": 6
+                            }
+                        }
+                    },
+                    "13": {
+                        "verses": {
+                            "9": {
+                                "lead_in": "about the commandments",
+                                "split_after_word": 15
+                            },
+                            "12": {
+                                "lead_in": "about the deeds of darkness",
+                                "split_after_word": 11
+                            }
+                        }
+                    },
+                    "14": {
+                        "verses": {
+                            "8": {
+                                "lead_in": "about living and dying",
+                                "split_after_word": 17
+                            },
+                            "11-12": {
+                                "lead_in": "about every knee and tongue",
+                                "split_after_word": 24
+                            },
+                            "13": {
+                                "lead_in": "about a stumbling block",
+                                "split_after_word": 8
+                            },
+                            "19": {
+                                "lead_in": "about what we should pursue",
+                                "split_after_word": 8
+                            },
+                            "21": {
+                                "lead_in": "about what is a good thing",
+                                "split_after_word": 12
+                            }
+                        }
+                    },
+                    "16": {
+                        "verses": {
+                            "20": {
+                                "lead_in": "about Satan",
+                                "split_after_word": 11
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

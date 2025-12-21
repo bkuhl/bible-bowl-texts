@@ -1,0 +1,135 @@
+{
+    "id": "17",
+    "name": "2026 Spring",
+    "program": "teen",
+    "text": {
+        "ranges": [
+            {
+                "start": {
+                    "book": 45,
+                    "chapter": 1
+                },
+                "end": {
+                    "book": 45,
+                    "chapter": 16
+                }
+            }
+        ]
+    },
+    "blocks": {
+        "1": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 45,
+                        "chapter": 1
+                    },
+                    "end": {
+                        "book": 45,
+                        "chapter": 5
+                    }
+                }
+            ]
+        },
+        "2": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 45,
+                        "chapter": 6
+                    },
+                    "end": {
+                        "book": 45,
+                        "chapter": 10
+                    }
+                }
+            ]
+        },
+        "3": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 45,
+                        "chapter": 11
+                    },
+                    "end": {
+                        "book": 45,
+                        "chapter": 16
+                    }
+                }
+            ]
+        }
+    },
+    "memory_verses": {
+        "books": {
+            "45": {
+                "chapters": {
+                    "1": {
+                        "verses": {
+                            "3-4": {
+                                "lead_in": "about Jesus Christ",
+                                "split_after_word": 18
+                            },
+                            "16": {
+                                "lead_in": "about why Paul is not ashamed",
+                                "split_after_word": 17
+                            },
+                            "17": {
+                                "lead_in": "about what is revealed in the gospel",
+                                "split_after_word": 14
+                            }
+                        }
+                    },
+                    "2": {
+                        "verses": {
+                            "9-11": {
+                                "lead_in": "about favoritism",
+                                "split_after_word": 21
+                            }
+                        }
+                    },
+                    "3": {
+                        "verses": {
+                            "9-10": {
+                                "lead_in": "about who is under sin",
+                                "split_after_word": 24
+                            },
+                            "23-24": {
+                                "lead_in": "about what all have done",
+                                "split_after_word": 12
+                            },
+                            "25": {
+                                "lead_in": "about how Christ was presented",
+                                "split_after_word": 16
+                            },
+                            "26": {
+                                "lead_in": "about why God presented Christ",
+                                "split_after_word": 12
+                            },
+                            "28": {
+                                "lead_in": "about being justified",
+                                "split_after_word": 10
+                            }
+                        }
+                    },
+                    "8": {
+                        "verses": {
+                            "1-2": {
+                                "lead_in": "about condemnation",
+                                "split_after_word": 11
+                            },
+                            "35,37": {
+                                "lead_in": "about conquerors",
+                                "split_after_word": 23
+                            },
+                            "38-39": {
+                                "lead_in": "about what Paul was persuaded",
+                                "split_after_word": 22
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

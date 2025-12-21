@@ -173,10 +173,10 @@ class SeasonFactoryTest extends TestCase
     public function testGetAllSeasons(): void
     {
         $seasons = $this->factory->getAllSeasons();
-        
+
         $this->assertIsArray($seasons);
-        $this->assertCount(1, $seasons);
-        
+        $this->assertGreaterThanOrEqual(1, count($seasons));
+
         $season = $seasons[0];
         $this->assertInstanceOf(\BKuhl\BibleBowlTexts\Season::class, $season);
         $this->assertEquals('16', $season->getId());
@@ -188,12 +188,12 @@ class SeasonFactoryTest extends TestCase
         // Test default program (null)
         $seasons = $this->factory->getAllSeasons();
         $this->assertIsArray($seasons);
-        $this->assertCount(1, $seasons);
-        
+        $this->assertGreaterThanOrEqual(1, count($seasons));
+
         // Test beginner program
         $seasons = $this->factory->getAllSeasons(SeasonFactory::PROGRAM_BEGINNER);
         $this->assertIsArray($seasons);
-        $this->assertCount(1, $seasons);
+        $this->assertGreaterThanOrEqual(1, count($seasons));
     }
 
     public function testInvalidSeasonReturnsNull(): void
@@ -302,25 +302,110 @@ class SeasonFactoryTest extends TestCase
         $this->assertCount(24, $beginnerFlattened);
     }
 
+    public function testMemoryVersesSupportsVerseRanges(): void
+    {
+        // Test that a SINGLE memory verse can span MULTIPLE verse numbers
+        // This is critical functionality for Bible Bowl where one memory verse
+        // may include content from multiple consecutive or non-consecutive Bible verses
+        $season = $this->factory->getSeasonById('17');
+
+        $this->assertInstanceOf(\BKuhl\BibleBowlTexts\Season::class, $season);
+
+        $memoryVerses = $season->getMemoryVerses();
+        $this->assertIsArray($memoryVerses);
+        $this->assertArrayHasKey('books', $memoryVerses);
+        $this->assertArrayHasKey('45', $memoryVerses['books']); // Romans
+
+        $romans = $memoryVerses['books']['45'];
+        $this->assertArrayHasKey('chapters', $romans);
+
+        // Test Case 1: Single memory verse spanning consecutive verses (Romans 1:3-4)
+        // This represents ONE memory verse that includes both verse 3 AND verse 4
+        $chapter1Verses = $romans['chapters']['1']['verses'];
+        $this->assertArrayHasKey('3-4', $chapter1Verses, 'Memory verse key should support consecutive verse ranges like "3-4"');
+        $this->assertIsArray($chapter1Verses['3-4']);
+        $this->assertArrayHasKey('lead_in', $chapter1Verses['3-4']);
+        $this->assertArrayHasKey('split_after_word', $chapter1Verses['3-4']);
+        $this->assertEquals('about Jesus Christ', $chapter1Verses['3-4']['lead_in']);
+
+        // Test Case 2: Single memory verse spanning three consecutive verses (Romans 2:9-11)
+        // This represents ONE memory verse that includes verses 9, 10, AND 11
+        $chapter2Verses = $romans['chapters']['2']['verses'];
+        $this->assertArrayHasKey('9-11', $chapter2Verses, 'Memory verse key should support multi-verse ranges like "9-11"');
+        $this->assertIsArray($chapter2Verses['9-11']);
+        $this->assertArrayHasKey('lead_in', $chapter2Verses['9-11']);
+        $this->assertEquals('about favoritism', $chapter2Verses['9-11']['lead_in']);
+
+        // Test Case 3: Multiple memory verses with verse ranges in the same chapter
+        $chapter3Verses = $romans['chapters']['3']['verses'];
+        $this->assertArrayHasKey('9-10', $chapter3Verses, 'Should support verse range "9-10"');
+        $this->assertArrayHasKey('23-24', $chapter3Verses, 'Should support verse range "23-24"');
+
+        // Verify these are distinct memory verses, not overlapping
+        $this->assertNotEquals(
+            $chapter3Verses['9-10']['lead_in'],
+            $chapter3Verses['23-24']['lead_in'],
+            'Different verse ranges should represent different memory verses'
+        );
+
+        // Test Case 4: Single memory verse with non-consecutive verses (Romans 8:35,37)
+        // This represents ONE memory verse that includes verse 35 and verse 37 (skipping 36)
+        $chapter8Verses = $romans['chapters']['8']['verses'];
+        $this->assertArrayHasKey('35,37', $chapter8Verses, 'Memory verse key should support non-consecutive verses like "35,37"');
+        $this->assertIsArray($chapter8Verses['35,37']);
+        $this->assertArrayHasKey('lead_in', $chapter8Verses['35,37']);
+        $this->assertArrayHasKey('split_after_word', $chapter8Verses['35,37']);
+        $this->assertEquals('about conquerors', $chapter8Verses['35,37']['lead_in']);
+
+        // Test Case 5: Single memory verse spanning two consecutive verses (Romans 8:1-2)
+        $this->assertArrayHasKey('1-2', $chapter8Verses, 'Memory verse key should support verse range "1-2"');
+        $this->assertEquals('about condemnation', $chapter8Verses['1-2']['lead_in']);
+    }
+
+    public function testMemoryVersesSupportsVerseRangesInBeginnerProgram(): void
+    {
+        // Test verse ranges in beginner program (Daniel and Jonah)
+        $season = $this->factory->getSeasonById('17', SeasonFactory::PROGRAM_BEGINNER);
+
+        $this->assertInstanceOf(\BKuhl\BibleBowlTexts\Season::class, $season);
+
+        $memoryVerses = $season->getMemoryVerses();
+        $this->assertIsArray($memoryVerses);
+        $this->assertArrayHasKey('books', $memoryVerses);
+        $this->assertArrayHasKey('27', $memoryVerses['books']); // Daniel
+
+        $daniel = $memoryVerses['books']['27'];
+        $this->assertArrayHasKey('chapters', $daniel);
+
+        // Test Case: Daniel 1:11-12 as a verse range
+        // This represents ONE memory verse spanning verses 11 AND 12
+        $daniel1Verses = $daniel['chapters']['1']['verses'];
+        $this->assertArrayHasKey('11-12', $daniel1Verses, 'Beginner program should support verse range "11-12" for Daniel 1:11-12');
+        $this->assertIsArray($daniel1Verses['11-12']);
+        $this->assertArrayHasKey('lead_in', $daniel1Verses['11-12']);
+        $this->assertArrayHasKey('split_after_word', $daniel1Verses['11-12']);
+        $this->assertEquals('what Daniel said to the guard', $daniel1Verses['11-12']['lead_in']);
+    }
+
     public function testUsesStubData(): void
     {
         // Verify we're using test stub data, not actual data files
         $season = $this->factory->getSeasonById('16');
-        
+
         $this->assertInstanceOf(\BKuhl\BibleBowlTexts\Season::class, $season);
         $this->assertEquals('16', $season->getId());
         $this->assertEquals('2025 Fall', $season->getName());
-        
+
         // Verify the stub data structure matches our expectations
         $this->assertIsArray($season->getMemoryVerses());
         $this->assertArrayHasKey('books', $season->getMemoryVerses()); // Stub has explicit structure
-        
+
         // Verify we're not accidentally using the actual data directory
         $reflection = new \ReflectionClass($this->factory);
         $dataPathProperty = $reflection->getProperty('dataPath');
         $dataPathProperty->setAccessible(true);
         $dataPath = $dataPathProperty->getValue($this->factory);
-        
+
         $this->assertStringContainsString('/tests/data', $dataPath);
         $this->assertStringNotContainsString('/data/', $dataPath); // Should not be the actual data directory
     }

@@ -1,0 +1,319 @@
+{
+    "id": "17",
+    "name": "2026 Spring",
+    "program": "beginner",
+    "text": {
+        "ranges": [
+            {
+                "start": {
+                    "book": 27,
+                    "chapter": 1
+                },
+                "end": {
+                    "book": 27,
+                    "chapter": 1
+                }
+            },
+            {
+                "start": {
+                    "book": 27,
+                    "chapter": 3
+                },
+                "end": {
+                    "book": 27,
+                    "chapter": 3
+                }
+            },
+            {
+                "start": {
+                    "book": 27,
+                    "chapter": 5
+                },
+                "end": {
+                    "book": 27,
+                    "chapter": 5,
+                    "verse": 30
+                }
+            },
+            {
+                "start": {
+                    "book": 27,
+                    "chapter": 6
+                },
+                "end": {
+                    "book": 27,
+                    "chapter": 6
+                }
+            },
+            {
+                "start": {
+                    "book": 32,
+                    "chapter": 1
+                },
+                "end": {
+                    "book": 32,
+                    "chapter": 1
+                }
+            },
+            {
+                "start": {
+                    "book": 32,
+                    "chapter": 2
+                },
+                "end": {
+                    "book": 32,
+                    "chapter": 2
+                }
+            },
+            {
+                "start": {
+                    "book": 32,
+                    "chapter": 3
+                },
+                "end": {
+                    "book": 32,
+                    "chapter": 3,
+                    "verse": 10
+                }
+            },
+            {
+                "start": {
+                    "book": 32,
+                    "chapter": 4
+                },
+                "end": {
+                    "book": 32,
+                    "chapter": 4
+                }
+            }
+        ]
+    },
+    "blocks": {
+        "1": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 27,
+                        "chapter": 1
+                    },
+                    "end": {
+                        "book": 27,
+                        "chapter": 1
+                    }
+                },
+                {
+                    "start": {
+                        "book": 27,
+                        "chapter": 3
+                    },
+                    "end": {
+                        "book": 27,
+                        "chapter": 3
+                    }
+                },
+                {
+                    "start": {
+                        "book": 27,
+                        "chapter": 5
+                    },
+                    "end": {
+                        "book": 27,
+                        "chapter": 5,
+                        "verse": 30
+                    }
+                }
+            ]
+        },
+        "2": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 27,
+                        "chapter": 6
+                    },
+                    "end": {
+                        "book": 27,
+                        "chapter": 6
+                    }
+                },
+                {
+                    "start": {
+                        "book": 32,
+                        "chapter": 1
+                    },
+                    "end": {
+                        "book": 32,
+                        "chapter": 1
+                    }
+                },
+                {
+                    "start": {
+                        "book": 32,
+                        "chapter": 2
+                    },
+                    "end": {
+                        "book": 32,
+                        "chapter": 2
+                    }
+                },
+                {
+                    "start": {
+                        "book": 32,
+                        "chapter": 3
+                    },
+                    "end": {
+                        "book": 32,
+                        "chapter": 3,
+                        "verse": 10
+                    }
+                },
+                {
+                    "start": {
+                        "book": 32,
+                        "chapter": 4
+                    },
+                    "end": {
+                        "book": 32,
+                        "chapter": 4
+                    }
+                }
+            ]
+        }
+    },
+    "memory_verses": {
+        "books": {
+            "27": {
+                "chapters": {
+                    "1": {
+                        "verses": {
+                            "8": {
+                                "lead_in": "about what Daniel determined",
+                                "split_after_word": 19
+                            },
+                            "9": {
+                                "lead_in": "about what God granted Daniel",
+                                "split_after_word": 6
+                            },
+                            "11-12": {
+                                "lead_in": "what Daniel said to the guard",
+                                "split_after_word": 16
+                            },
+                            "15": {
+                                "lead_in": "about what happened at the end of ten days",
+                                "split_after_word": 10
+                            },
+                            "17": {
+                                "lead_in": "about the young men",
+                                "split_after_word": 16
+                            },
+                            "19": {
+                                "lead_in": "when the chief eunuch presented the young men to Nebuchadnezzar",
+                                "split_after_word": 21
+                            },
+                            "20": {
+                                "lead_in": "about how the king found them",
+                                "split_after_word": 14
+                            }
+                        }
+                    },
+                    "3": {
+                        "verses": {
+                            "17": {
+                                "lead_in": "what Shadrach, Meshach, and Abednego said to the king",
+                                "split_after_word": 17
+                            },
+                            "18": {
+                                "lead_in": "what Shadrach, Meshach, and Abednego wanted the king to know",
+                                "split_after_word": 15
+                            },
+                            "25": {
+                                "lead_in": "about what the king said he saw",
+                                "split_after_word": 15
+                            },
+                            "28": {
+                                "lead_in": "when Nebuchadnezzar praised God",
+                                "split_after_word": 24
+                            }
+                        }
+                    },
+                    "5": {
+                        "verses": {
+                            "14": {
+                                "lead_in": "what the king said he heard",
+                                "split_after_word": 12
+                            }
+                        }
+                    },
+                    "6": {
+                        "verses": {
+                            "10": {
+                                "lead_in": "what happened after Darius signed the written edict",
+                                "split_after_word": 24
+                            },
+                            "16": {
+                                "lead_in": "what happened when the edict could not be changed",
+                                "split_after_word": 17
+                            },
+                            "22": {
+                                "lead_in": "what Daniel said after he was rescued from the lions",
+                                "split_after_word": 15
+                            },
+                            "23": {
+                                "lead_in": "what the king did after Daniel was rescued from the lions",
+                                "split_after_word": 14
+                            },
+                            "27": {
+                                "lead_in": "what Darius said God does",
+                                "split_after_word": 15
+                            }
+                        }
+                    }
+                }
+            },
+            "32": {
+                "chapters": {
+                    "1": {
+                        "verses": {
+                            "9": {
+                                "lead_in": "what Jonah answered the sailors",
+                                "split_after_word": 9
+                            },
+                            "16": {
+                                "lead_in": "what the men did after the sea stopped raging",
+                                "split_after_word": 10
+                            },
+                            "17": {
+                                "lead_in": "what the LORD did after the sea stopped raging",
+                                "split_after_word": 9
+                            }
+                        }
+                    },
+                    "2": {
+                        "verses": {
+                            "2": {
+                                "lead_in": "what Jonah first said in the belly of the fish",
+                                "split_after_word": 12
+                            },
+                            "6": {
+                                "lead_in": "what Jonah did after seaweed was wrapped around his head",
+                                "split_after_word": 15
+                            },
+                            "7": {
+                                "lead_in": "when Jonah remembered",
+                                "split_after_word": 10
+                            }
+                        }
+                    },
+                    "3": {
+                        "verses": {
+                            "5": {
+                                "lead_in": "what happened when Jonah proclaimed that Nineveh would be demolished",
+                                "split_after_word": 7
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
