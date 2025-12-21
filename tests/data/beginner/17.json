@@ -1,0 +1,59 @@
+{
+    "id": "17",
+    "name": "2026 Spring",
+    "program": "beginner",
+    "text": {
+        "ranges": [
+            {
+                "start": {
+                    "book": 27,
+                    "chapter": 1
+                },
+                "end": {
+                    "book": 27,
+                    "chapter": 1
+                }
+            }
+        ]
+    },
+    "blocks": {
+        "1": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 27,
+                        "chapter": 1
+                    },
+                    "end": {
+                        "book": 27,
+                        "chapter": 1
+                    }
+                }
+            ]
+        }
+    },
+    "memory_verses": {
+        "books": {
+            "27": {
+                "chapters": {
+                    "1": {
+                        "verses": {
+                            "8": {
+                                "lead_in": "about what Daniel determined",
+                                "split_after_word": 19
+                            },
+                            "11-12": {
+                                "lead_in": "what Daniel said to the guard",
+                                "split_after_word": 16
+                            },
+                            "17": {
+                                "lead_in": "about the young men",
+                                "split_after_word": 16
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,6 +5,9 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use BKuhl\ScriptureRanges\ScriptureRangeBuilder;
 use BKuhl\ScriptureRanges\ChapterRange;
 use BKuhl\BibleCSB\Book\FirstSamuel;
+use BKuhl\BibleCSB\Book\Daniel;
+use BKuhl\BibleCSB\Book\Jonah;
+use BKuhl\BibleCSB\Book\Romans;
 use BKuhl\BibleBowlTexts\SeasonFactory;
 
 $dataDir = __DIR__ . '/../data';
@@ -19,6 +22,9 @@ if (!is_dir($beginnerDir)) {
 }
 
 $samuelBook = new FirstSamuel();
+$danielBook = new Daniel();
+$jonahBook = new Jonah();
+$romansBook = new Romans();
 
 // Team Program Data (Full Coverage)
 $teamEntireTextCollection = (new ScriptureRangeBuilder())
@@ -246,6 +252,108 @@ $beginnerSeasonData = [
     ]
 ];
 
+// Season 17 Beginner Program Data (Daniel and Jonah)
+$season17BeginnerEntireTextCollection = (new ScriptureRangeBuilder())
+    ->with($danielBook, 1, null, null, 21)      // Dan 1:1-21
+    ->with($danielBook, 3, null, null, 30)      // Dan 3:1-30
+    ->with($danielBook, 5, null, null, 30)      // Dan 5:1-30
+    ->with($danielBook, 6, null, null, 28)      // Dan 6:1-28
+    ->with($jonahBook, 1, null, null, 17)       // Jonah 1:1-17
+    ->with($jonahBook, 2, null, null, 10)       // Jonah 2:1-10
+    ->with($jonahBook, 3, null, null, 10)       // Jonah 3:1-10
+    ->with($jonahBook, 4, null, null, 11)       // Jonah 4:1-11
+    ->build();
+
+$season17BeginnerBlock1Collection = (new ScriptureRangeBuilder())
+    ->with($danielBook, 1, null, null, 21)      // Dan 1:1-21
+    ->with($danielBook, 3, null, null, 30)      // Dan 3:1-30
+    ->with($danielBook, 5, null, null, 30)      // Dan 5:1-30
+    ->build();
+
+$season17BeginnerBlock2Collection = (new ScriptureRangeBuilder())
+    ->with($danielBook, 6, null, null, 28)      // Dan 6:1-28
+    ->with($jonahBook, 1, null, null, 17)       // Jonah 1:1-17
+    ->with($jonahBook, 2, null, null, 10)       // Jonah 2:1-10
+    ->with($jonahBook, 3, null, null, 10)       // Jonah 3:1-10
+    ->with($jonahBook, 4, null, null, 11)       // Jonah 4:1-11
+    ->build();
+
+// Season 17 Beginner Program Season Data
+$season17BeginnerSeasonData = [
+    'id' => '17',
+    'name' => '2026 Spring',
+    'program' => 'beginner',
+    'text' => $season17BeginnerEntireTextCollection->toArray(),
+    'blocks' => [
+        '1' => $season17BeginnerBlock1Collection->toArray(),
+        '2' => $season17BeginnerBlock2Collection->toArray(),
+    ],
+    'memory_verses' => [
+        'books' => [
+            27 => [ // Daniel
+                'chapters' => [
+                    1 => [
+                        'verses' => [
+                            '8' => ['lead_in' => 'about what Daniel determined', 'split_after_word' => 19],
+                            '9' => ['lead_in' => 'about what God granted Daniel', 'split_after_word' => 6],
+                            '11-12' => ['lead_in' => 'what Daniel said to the guard', 'split_after_word' => 16],
+                            '15' => ['lead_in' => 'about what happened at the end of ten days', 'split_after_word' => 10],
+                            '17' => ['lead_in' => 'about the young men', 'split_after_word' => 16],
+                            '19' => ['lead_in' => 'when the chief eunuch presented the young men to Nebuchadnezzar', 'split_after_word' => 21],
+                            '20' => ['lead_in' => 'about how the king found them', 'split_after_word' => 14],
+                        ]
+                    ],
+                    3 => [
+                        'verses' => [
+                            '17' => ['lead_in' => 'what Shadrach, Meshach, and Abednego said to the king', 'split_after_word' => 17],
+                            '18' => ['lead_in' => 'what Shadrach, Meshach, and Abednego wanted the king to know', 'split_after_word' => 15],
+                            '25' => ['lead_in' => 'about what the king said he saw', 'split_after_word' => 15],
+                            '28' => ['lead_in' => 'when Nebuchadnezzar praised God', 'split_after_word' => 24],
+                        ]
+                    ],
+                    5 => [
+                        'verses' => [
+                            '14' => ['lead_in' => 'what the king said he heard', 'split_after_word' => 12],
+                        ]
+                    ],
+                    6 => [
+                        'verses' => [
+                            '10' => ['lead_in' => 'what happened after Darius signed the written edict', 'split_after_word' => 24],
+                            '16' => ['lead_in' => 'what happened when the edict could not be changed', 'split_after_word' => 17],
+                            '22' => ['lead_in' => 'what Daniel said after he was rescued from the lions', 'split_after_word' => 15],
+                            '23' => ['lead_in' => 'what the king did after Daniel was rescued from the lions', 'split_after_word' => 14],
+                            '27' => ['lead_in' => 'what Darius said God does', 'split_after_word' => 15],
+                        ]
+                    ],
+                ]
+            ],
+            32 => [ // Jonah
+                'chapters' => [
+                    1 => [
+                        'verses' => [
+                            '9' => ['lead_in' => 'what Jonah answered the sailors', 'split_after_word' => 9],
+                            '16' => ['lead_in' => 'what the men did after the sea stopped raging', 'split_after_word' => 10],
+                            '17' => ['lead_in' => 'what the LORD did after the sea stopped raging', 'split_after_word' => 9],
+                        ]
+                    ],
+                    2 => [
+                        'verses' => [
+                            '2' => ['lead_in' => 'what Jonah first said in the belly of the fish', 'split_after_word' => 12],
+                            '6' => ['lead_in' => 'what Jonah did after seaweed was wrapped around his head', 'split_after_word' => 15],
+                            '7' => ['lead_in' => 'when Jonah remembered', 'split_after_word' => 10],
+                        ]
+                    ],
+                    3 => [
+                        'verses' => [
+                            '5' => ['lead_in' => 'what happened when Jonah proclaimed that Nineveh would be demolished', 'split_after_word' => 7],
+                        ]
+                    ],
+                ]
+            ]
+        ]
+    ]
+];
+
 // Generate Team Program File
 $fileName = $teamSeasonData['id'] . '.json';
 $jsonData = json_encode($teamSeasonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
@@ -255,6 +363,152 @@ file_put_contents($dataDir . '/' . $fileName, $jsonData);
 $jsonData = json_encode($beginnerSeasonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 file_put_contents($beginnerDir . '/' . $fileName, $jsonData);
 
+// Season 17 Teen Program Data (Romans)
+$season17TeenEntireTextCollection = (new ScriptureRangeBuilder())
+    ->with($romansBook, ChapterRange::range(1, 16))
+    ->build();
+
+$season17TeenBlock1Collection = (new ScriptureRangeBuilder())
+    ->with($romansBook, ChapterRange::range(1, 5))
+    ->build();
+
+$season17TeenBlock2Collection = (new ScriptureRangeBuilder())
+    ->with($romansBook, ChapterRange::range(6, 10))
+    ->build();
+
+$season17TeenBlock3Collection = (new ScriptureRangeBuilder())
+    ->with($romansBook, ChapterRange::range(11, 16))
+    ->build();
+
+// Season 17 Teen Program Season Data
+$season17TeenSeasonData = [
+    'id' => '17',
+    'name' => '2026 Spring',
+    'program' => 'teen',
+    'text' => $season17TeenEntireTextCollection->toArray(),
+    'blocks' => [
+        '1' => $season17TeenBlock1Collection->toArray(),
+        '2' => $season17TeenBlock2Collection->toArray(),
+        '3' => $season17TeenBlock3Collection->toArray(),
+    ],
+    'memory_verses' => [
+        'books' => [
+            45 => [ // Romans
+                'chapters' => [
+                    1 => [
+                        'verses' => [
+                            '3-4' => ['lead_in' => 'about Jesus Christ', 'split_after_word' => 18],
+                            '16' => ['lead_in' => 'about why Paul is not ashamed', 'split_after_word' => 17],
+                            '17' => ['lead_in' => 'about what is revealed in the gospel', 'split_after_word' => 14],
+                        ]
+                    ],
+                    2 => [
+                        'verses' => [
+                            '9-11' => ['lead_in' => 'about favoritism', 'split_after_word' => 21],
+                        ]
+                    ],
+                    3 => [
+                        'verses' => [
+                            '9-10' => ['lead_in' => 'about who is under sin', 'split_after_word' => 24],
+                            '23-24' => ['lead_in' => 'about what all have done', 'split_after_word' => 12],
+                            '25' => ['lead_in' => 'about how Christ was presented', 'split_after_word' => 16],
+                            '26' => ['lead_in' => 'about why God presented Christ', 'split_after_word' => 12],
+                            '28' => ['lead_in' => 'about being justified', 'split_after_word' => 10],
+                        ]
+                    ],
+                    4 => [
+                        'verses' => [
+                            '24-25' => ['lead_in' => 'about what was credited to us', 'split_after_word' => 21],
+                        ]
+                    ],
+                    5 => [
+                        'verses' => [
+                            '1' => ['lead_in' => 'about peace', 'split_after_word' => 9],
+                            '2' => ['lead_in' => 'about access', 'split_after_word' => 16],
+                            '5' => ['lead_in' => 'about hope', 'split_after_word' => 16],
+                            '6' => ['lead_in' => 'about those for whom Christ died', 'split_after_word' => 6],
+                            '8' => ['lead_in' => 'about when Christ died', 'split_after_word' => 8],
+                        ]
+                    ],
+                    6 => [
+                        'verses' => [
+                            '4' => ['lead_in' => 'about baptism', 'split_after_word' => 10],
+                            '6-7' => ['lead_in' => 'about our old self', 'split_after_word' => 33],
+                            '23' => ['lead_in' => 'about wages', 'split_after_word' => 7],
+                        ]
+                    ],
+                    8 => [
+                        'verses' => [
+                            '1-2' => ['lead_in' => 'about condemnation', 'split_after_word' => 11],
+                            '13' => ['lead_in' => 'about when you will live and die', 'split_after_word' => 13],
+                            '15' => ['lead_in' => 'about the spirit of adoption', 'split_after_word' => 14],
+                            '18' => ['lead_in' => 'about sufferings', 'split_after_word' => 10],
+                            '28' => ['lead_in' => 'about what all things do', 'split_after_word' => 15],
+                            '31-32' => ['lead_in' => 'about God being for us', 'split_after_word' => 18],
+                            '35,37' => ['lead_in' => 'about conquerors', 'split_after_word' => 23],
+                            '38-39' => ['lead_in' => 'about what Paul was persuaded', 'split_after_word' => 22],
+                        ]
+                    ],
+                    10 => [
+                        'verses' => [
+                            '9' => ['lead_in' => 'about confessing and believing', 'split_after_word' => 9],
+                            '12-13' => ['lead_in' => 'about who will be saved', 'split_after_word' => 22],
+                            '14' => ['lead_in' => 'about the need for a preacher', 'split_after_word' => 12],
+                            '15' => ['lead_in' => 'about sending preachers', 'split_after_word' => 9],
+                        ]
+                    ],
+                    11 => [
+                        'verses' => [
+                            '33' => ['lead_in' => 'about the depth of God\'s attributes', 'split_after_word' => 15],
+                            '34-35' => ['lead_in' => 'about man\'s inferiority to God', 'split_after_word' => 15],
+                            '36' => ['lead_in' => 'about what all things are', 'split_after_word' => 12],
+                        ]
+                    ],
+                    12 => [
+                        'verses' => [
+                            '1' => ['lead_in' => 'about living sacrifices', 'split_after_word' => 11],
+                            '2' => ['lead_in' => 'about being transformed', 'split_after_word' => 16],
+                            '9-10' => ['lead_in' => 'about love', 'split_after_word' => 12],
+                            '21' => ['lead_in' => 'about good and evil', 'split_after_word' => 6],
+                        ]
+                    ],
+                    13 => [
+                        'verses' => [
+                            '9' => ['lead_in' => 'about the commandments', 'split_after_word' => 15],
+                            '12' => ['lead_in' => 'about the deeds of darkness', 'split_after_word' => 11],
+                        ]
+                    ],
+                    14 => [
+                        'verses' => [
+                            '8' => ['lead_in' => 'about living and dying', 'split_after_word' => 17],
+                            '11-12' => ['lead_in' => 'about every knee and tongue', 'split_after_word' => 24],
+                            '13' => ['lead_in' => 'about a stumbling block', 'split_after_word' => 8],
+                            '19' => ['lead_in' => 'about what we should pursue', 'split_after_word' => 8],
+                            '21' => ['lead_in' => 'about what is a good thing', 'split_after_word' => 12],
+                        ]
+                    ],
+                    16 => [
+                        'verses' => [
+                            '20' => ['lead_in' => 'about Satan', 'split_after_word' => 11],
+                        ]
+                    ],
+                ]
+            ]
+        ]
+    ]
+];
+
+// Generate Season 17 Beginner Program File
+$season17FileName = $season17BeginnerSeasonData['id'] . '.json';
+$season17JsonData = json_encode($season17BeginnerSeasonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+file_put_contents($beginnerDir . '/' . $season17FileName, $season17JsonData);
+
+// Generate Season 17 Teen Program File
+$season17TeenJsonData = json_encode($season17TeenSeasonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+file_put_contents($dataDir . '/' . $season17FileName, $season17TeenJsonData);
+
 echo "Generated season data files:\n";
 echo "- Team program: {$dataDir}/{$fileName}\n";
-echo "- Beginner program: {$beginnerDir}/{$fileName}\n"; 
+echo "- Beginner program: {$beginnerDir}/{$fileName}\n";
+echo "- Season 17 Beginner program: {$beginnerDir}/{$season17FileName}\n";
+echo "- Season 17 Teen program: {$dataDir}/{$season17FileName}\n"; 
