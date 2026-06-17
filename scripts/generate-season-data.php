@@ -8,7 +8,6 @@ use BKuhl\BibleCSB\Book\FirstSamuel;
 use BKuhl\BibleCSB\Book\Daniel;
 use BKuhl\BibleCSB\Book\Jonah;
 use BKuhl\BibleCSB\Book\Romans;
-use BKuhl\BibleCSB\Book\Acts;
 use BKuhl\BibleBowlTexts\SeasonFactory;
 
 $dataDir = __DIR__ . '/../data';
@@ -26,7 +25,6 @@ $samuelBook = new FirstSamuel();
 $danielBook = new Daniel();
 $jonahBook = new Jonah();
 $romansBook = new Romans();
-$actsBook = new Acts();
 
 // Team Program Data (Full Coverage)
 $teamEntireTextCollection = (new ScriptureRangeBuilder())
@@ -509,141 +507,8 @@ file_put_contents($beginnerDir . '/' . $season17FileName, $season17JsonData);
 $season17TeenJsonData = json_encode($season17TeenSeasonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 file_put_contents($dataDir . '/' . $season17FileName, $season17TeenJsonData);
 
-// Season 18 Teen Program Data (Acts)
-$season18TeenEntireTextCollection = (new ScriptureRangeBuilder())
-    ->with($actsBook, ChapterRange::range(1, 12))
-    ->build();
-
-$season18TeenBlock1Collection = (new ScriptureRangeBuilder())
-    ->with($actsBook, ChapterRange::range(1, 4))
-    ->build();
-
-$season18TeenBlock2Collection = (new ScriptureRangeBuilder())
-    ->with($actsBook, ChapterRange::range(5, 8))
-    ->build();
-
-$season18TeenBlock3Collection = (new ScriptureRangeBuilder())
-    ->with($actsBook, ChapterRange::range(9, 12))
-    ->build();
-
-// Season 18 Teen Program Season Data
-$season18TeenSeasonData = [
-    'id' => '18',
-    'name' => '2026 Fall',
-    'program' => 'teen',
-    'text' => $season18TeenEntireTextCollection->toArray(),
-    'blocks' => [
-        '1' => $season18TeenBlock1Collection->toArray(),
-        '2' => $season18TeenBlock2Collection->toArray(),
-        '3' => $season18TeenBlock3Collection->toArray(),
-    ],
-    'memory_verses' => [
-        'books' => [
-            44 => [ // Acts
-                'chapters' => [
-                    1 => [
-                        'verses' => [
-                            '3' => ['lead_in' => 'when Jesus presented himself alive', 'split_after_word' => 15],
-                            '4-5' => ['lead_in' => 'when Jesus commanded the apostles', 'split_after_word' => 28],
-                            '8' => ['lead_in' => 'what Jesus said the apostles would receive', 'split_after_word' => 19],
-                            '11' => ['lead_in' => 'what two men in white clothes said to the apostles', 'split_after_word' => 24],
-                        ]
-                    ],
-                    2 => [
-                        'verses' => [
-                            '22' => ['lead_in' => 'how Peter said Jesus was attested', 'split_after_word' => 18],
-                            '23-24' => ['lead_in' => 'what Peter said was not possible', 'split_after_word' => 25],
-                            '36' => ['lead_in' => 'what Peter said to know with certainty', 'split_after_word' => 10],
-                            '38-39' => ['lead_in' => 'the answer to "Brothers, what should we do?"', 'split_after_word' => 31],
-                            '42-43' => ['lead_in' => 'after about three thousand people were added to them', 'split_after_word' => 18],
-                        ]
-                    ],
-                    3 => [
-                        'verses' => [
-                            '6' => ['lead_in' => 'what Peter said to a lame man', 'split_after_word' => 17],
-                            '19-20' => ['lead_in' => 'about repenting and turning back', 'split_after_word' => 13],
-                            '22-23' => ['lead_in' => 'when Moses prophesied the coming of Jesus', 'split_after_word' => 27],
-                        ]
-                    ],
-                    4 => [
-                        'verses' => [
-                            '11-12' => ['lead_in' => 'what this Jesus is', 'split_after_word' => 14],
-                            '13' => ['lead_in' => 'when the rulers and elders were amazed', 'split_after_word' => 18],
-                            '19-20' => ['lead_in' => 'what Peter and John were unable to do', 'split_after_word' => 25],
-                        ]
-                    ],
-                    5 => [
-                        'verses' => [
-                            '29-30' => ['lead_in' => 'about obeying God', 'split_after_word' => 12],
-                            '31-32' => ['lead_in' => 'about what the apostles were witnesses of', 'split_after_word' => 21],
-                            '41' => ['lead_in' => 'about when the apostles were rejoicing', 'split_after_word' => 10],
-                            '42' => ['lead_in' => 'about the apostles continued doing', 'split_after_word' => 9],
-                        ]
-                    ],
-                    6 => [
-                        'verses' => [
-                            '7' => ['lead_in' => 'after they prayed and laid their hands on the seven men', 'split_after_word' => 14],
-                        ]
-                    ],
-                    7 => [
-                        'verses' => [
-                            '43' => ['lead_in' => 'when Israel worshiped false gods', 'split_after_word' => 14],
-                            '49-50' => ['lead_in' => 'what the prophet says about where the Most High dwells', 'split_after_word' => 28],
-                            '55-56' => ['lead_in' => 'after they gnashed their teeth at Stephen', 'split_after_word' => 24],
-                            '59-60' => ['lead_in' => 'about the stoning of Stephen', 'split_after_word' => 13],
-                        ]
-                    ],
-                    8 => [
-                        'verses' => [
-                            '16-17' => ['lead_in' => 'about the Samaritans', 'split_after_word' => 12],
-                            '18-19' => ['lead_in' => 'about how the Spirit was given', 'split_after_word' => 20],
-                            '30-31' => ['lead_in' => 'when Philip ran up to the chariot', 'split_after_word' => 21],
-                            '32-33' => ['lead_in' => 'the Scripture passage the Ethiopian official was reading', 'split_after_word' => 34],
-                            '36' => ['lead_in' => 'about the eunuch being baptized', 'split_after_word' => 12],
-                            '39' => ['lead_in' => 'after the eunuch was baptized', 'split_after_word' => 16],
-                        ]
-                    ],
-                    9 => [
-                        'verses' => [
-                            '4-5' => ['lead_in' => 'after a light flashed around Paul', 'split_after_word' => 18],
-                            '15-16' => ['lead_in' => 'when the Lord told Ananias to "Go"', 'split_after_word' => 23],
-                            '31' => ['lead_in' => 'about the church\'s growth', 'split_after_word' => 14],
-                        ]
-                    ],
-                    10 => [
-                        'verses' => [
-                            '4' => ['lead_in' => 'when an angel said "Cornelius"', 'split_after_word' => 15],
-                            '34-35' => ['lead_in' => 'what Peter said about favoritism', 'split_after_word' => 13],
-                            '38' => ['lead_in' => 'about the events in Judea', 'split_after_word' => 13],
-                            '39' => ['lead_in' => 'what Peter said about the apostles being witnesses', 'split_after_word' => 16],
-                            '40-41' => ['lead_in' => 'after they killed Jesus by hanging him on a tree', 'split_after_word' => 15],
-                            '42-43' => ['lead_in' => 'what witnesses and all the prophets testify', 'split_after_word' => 29],
-                            '45' => ['lead_in' => 'when the Holy Spirit came down on all those who heard the message', 'split_after_word' => 10],
-                            '47' => ['lead_in' => 'what Peter responded about Gentiles being baptized', 'split_after_word' => 11],
-                        ]
-                    ],
-                    11 => [
-                        'verses' => [
-                            '15-16' => ['lead_in' => 'what Peter remembered', 'split_after_word' => 19],
-                            '17' => ['lead_in' => 'about hindering God', 'split_after_word' => 22],
-                            '18' => ['lead_in' => 'after Peter asked how he could possibly hinder God', 'split_after_word' => 11],
-                            '23' => ['lead_in' => 'when Barnabas traveled to Antioch', 'split_after_word' => 9],
-                        ]
-                    ],
-                ]
-            ]
-        ]
-    ]
-];
-
-// Generate Season 18 Teen Program File
-$season18FileName = $season18TeenSeasonData['id'] . '.json';
-$season18TeenJsonData = json_encode($season18TeenSeasonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-file_put_contents($dataDir . '/' . $season18FileName, $season18TeenJsonData);
-
 echo "Generated season data files:\n";
 echo "- Team program: {$dataDir}/{$fileName}\n";
 echo "- Beginner program: {$beginnerDir}/{$fileName}\n";
 echo "- Season 17 Beginner program: {$beginnerDir}/{$season17FileName}\n";
-echo "- Season 17 Teen program: {$dataDir}/{$season17FileName}\n";
-echo "- Season 18 Teen program: {$dataDir}/{$season18FileName}\n"; 
+echo "- Season 17 Teen program: {$dataDir}/{$season17FileName}\n"; 
