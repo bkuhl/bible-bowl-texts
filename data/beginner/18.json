@@ -1,0 +1,303 @@
+{
+    "id": "18",
+    "name": "2026 Fall",
+    "program": "beginner",
+    "text": {
+        "ranges": [
+            {
+                "start": {
+                    "book": 44,
+                    "chapter": 6,
+                    "verse": 8
+                },
+                "end": {
+                    "book": 44,
+                    "chapter": 6
+                }
+            },
+            {
+                "start": {
+                    "book": 44,
+                    "chapter": 7,
+                    "verse": 51
+                },
+                "end": {
+                    "book": 44,
+                    "chapter": 7,
+                    "verse": 60
+                }
+            },
+            {
+                "start": {
+                    "book": 44,
+                    "chapter": 8
+                },
+                "end": {
+                    "book": 44,
+                    "chapter": 8,
+                    "verse": 40
+                }
+            },
+            {
+                "start": {
+                    "book": 44,
+                    "chapter": 9
+                },
+                "end": {
+                    "book": 44,
+                    "chapter": 9
+                }
+            },
+            {
+                "start": {
+                    "book": 44,
+                    "chapter": 10
+                },
+                "end": {
+                    "book": 44,
+                    "chapter": 10
+                }
+            },
+            {
+                "start": {
+                    "book": 44,
+                    "chapter": 11,
+                    "verse": 19
+                },
+                "end": {
+                    "book": 44,
+                    "chapter": 11
+                }
+            },
+            {
+                "start": {
+                    "book": 44,
+                    "chapter": 12
+                },
+                "end": {
+                    "book": 44,
+                    "chapter": 12,
+                    "verse": 24
+                }
+            }
+        ]
+    },
+    "blocks": {
+        "1": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 44,
+                        "chapter": 6,
+                        "verse": 8
+                    },
+                    "end": {
+                        "book": 44,
+                        "chapter": 6
+                    }
+                },
+                {
+                    "start": {
+                        "book": 44,
+                        "chapter": 7,
+                        "verse": 51
+                    },
+                    "end": {
+                        "book": 44,
+                        "chapter": 7,
+                        "verse": 60
+                    }
+                },
+                {
+                    "start": {
+                        "book": 44,
+                        "chapter": 8
+                    },
+                    "end": {
+                        "book": 44,
+                        "chapter": 8,
+                        "verse": 40
+                    }
+                },
+                {
+                    "start": {
+                        "book": 44,
+                        "chapter": 9
+                    },
+                    "end": {
+                        "book": 44,
+                        "chapter": 9
+                    }
+                }
+            ]
+        },
+        "2": {
+            "ranges": [
+                {
+                    "start": {
+                        "book": 44,
+                        "chapter": 10
+                    },
+                    "end": {
+                        "book": 44,
+                        "chapter": 10
+                    }
+                },
+                {
+                    "start": {
+                        "book": 44,
+                        "chapter": 11,
+                        "verse": 19
+                    },
+                    "end": {
+                        "book": 44,
+                        "chapter": 11
+                    }
+                },
+                {
+                    "start": {
+                        "book": 44,
+                        "chapter": 12
+                    },
+                    "end": {
+                        "book": 44,
+                        "chapter": 12,
+                        "verse": 24
+                    }
+                }
+            ]
+        }
+    },
+    "memory_verses": {
+        "books": {
+            "44": {
+                "chapters": {
+                    "6": {
+                        "verses": {
+                            "10": {
+                                "lead_in": "about those who began to argue with Stephen",
+                                "split_after_word": 18
+                            }
+                        }
+                    },
+                    "7": {
+                        "verses": {
+                            "55": {
+                                "lead_in": "what happened when they gnashed their teeth at Stephen",
+                                "split_after_word": 24
+                            },
+                            "59": {
+                                "lead_in": "about when they were stoning Stephen",
+                                "split_after_word": 13
+                            },
+                            "60": {
+                                "lead_in": "when Stephen fell asleep",
+                                "split_after_word": 25
+                            }
+                        }
+                    },
+                    "8": {
+                        "verses": {
+                            "4-5": {
+                                "lead_in": "about those who were scattered",
+                                "split_after_word": 26
+                            },
+                            "35": {
+                                "lead_in": "when the Ethiopian official asked who the prophet was saying this about",
+                                "split_after_word": 14
+                            },
+                            "36": {
+                                "lead_in": "about the eunuch being baptized",
+                                "split_after_word": 25
+                            }
+                        }
+                    },
+                    "9": {
+                        "verses": {
+                            "4-5": {
+                                "lead_in": "after a light flashed around Paul",
+                                "split_after_word": 34
+                            },
+                            "15": {
+                                "lead_in": "when the Lord told Ananias to \"Go\"",
+                                "split_after_word": 23
+                            },
+                            "20": {
+                                "lead_in": "when Saul was in Damascus for some time",
+                                "split_after_word": 14
+                            },
+                            "22": {
+                                "lead_in": "when Saul grew stronger",
+                                "split_after_word": 20
+                            },
+                            "31": {
+                                "lead_in": "about the church's growth",
+                                "split_after_word": 31
+                            }
+                        }
+                    },
+                    "10": {
+                        "verses": {
+                            "4": {
+                                "lead_in": "when an angel said \"Cornelius\"",
+                                "split_after_word": 15
+                            },
+                            "34-35": {
+                                "lead_in": "what Peter said about favoritism",
+                                "split_after_word": 13
+                            },
+                            "36": {
+                                "lead_in": "about the good news of peace",
+                                "split_after_word": 7
+                            },
+                            "39": {
+                                "lead_in": "what Peter said about the apostles being witnesses",
+                                "split_after_word": 16
+                            },
+                            "42": {
+                                "lead_in": "what witnesses testify",
+                                "split_after_word": 11
+                            },
+                            "43": {
+                                "lead_in": "what all the prophets testify",
+                                "split_after_word": 10
+                            },
+                            "45": {
+                                "lead_in": "when the Holy Spirit came down on all those who heard the message",
+                                "split_after_word": 10
+                            },
+                            "47": {
+                                "lead_in": "what Peter responded about Gentiles being baptized",
+                                "split_after_word": 11
+                            }
+                        }
+                    },
+                    "11": {
+                        "verses": {
+                            "21": {
+                                "lead_in": "when the good news was proclaimed to Greeks",
+                                "split_after_word": 6
+                            },
+                            "23": {
+                                "lead_in": "when Barnabas traveled to Antioch",
+                                "split_after_word": 12
+                            }
+                        }
+                    },
+                    "12": {
+                        "verses": {
+                            "5": {
+                                "lead_in": "about Peter in prison",
+                                "split_after_word": 6
+                            },
+                            "11": {
+                                "lead_in": "about what Peter knew for certain",
+                                "split_after_word": 19
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
