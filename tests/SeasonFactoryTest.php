@@ -175,25 +175,27 @@ class SeasonFactoryTest extends TestCase
         $seasons = $this->factory->getAllSeasons();
 
         $this->assertIsArray($seasons);
-        $this->assertGreaterThanOrEqual(1, count($seasons));
+        $this->assertGreaterThanOrEqual(2, count($seasons));
 
-        $season = $seasons[0];
-        $this->assertInstanceOf(\BKuhl\BibleBowlTexts\Season::class, $season);
-        $this->assertEquals('16', $season->getId());
-        $this->assertEquals('2025 Fall', $season->getName());
+        $seasonIds = array_map(static fn ($season) => $season->getId(), $seasons);
+        $this->assertContains('16', $seasonIds);
+        $this->assertContains('17', $seasonIds);
+
+        $season16 = $this->getSeasonFromList($seasons, '16');
+        $this->assertEquals('2025 Fall', $season16->getName());
     }
 
     public function testGetAllSeasonsWithProgram(): void
     {
-        // Test default program (null)
         $seasons = $this->factory->getAllSeasons();
         $this->assertIsArray($seasons);
-        $this->assertGreaterThanOrEqual(1, count($seasons));
+        $this->assertGreaterThanOrEqual(2, count($seasons));
+        $this->assertContains('16', array_map(static fn ($season) => $season->getId(), $seasons));
 
-        // Test beginner program
-        $seasons = $this->factory->getAllSeasons(SeasonFactory::PROGRAM_BEGINNER);
-        $this->assertIsArray($seasons);
-        $this->assertGreaterThanOrEqual(1, count($seasons));
+        $beginnerSeasons = $this->factory->getAllSeasons(SeasonFactory::PROGRAM_BEGINNER);
+        $this->assertIsArray($beginnerSeasons);
+        $this->assertGreaterThanOrEqual(2, count($beginnerSeasons));
+        $this->assertContains('16', array_map(static fn ($season) => $season->getId(), $beginnerSeasons));
     }
 
     public function testInvalidSeasonReturnsNull(): void
@@ -408,5 +410,19 @@ class SeasonFactoryTest extends TestCase
 
         $this->assertStringContainsString('/tests/data', $dataPath);
         $this->assertStringNotContainsString('/data/', $dataPath); // Should not be the actual data directory
+    }
+
+    /**
+     * @param list<\BKuhl\BibleBowlTexts\Season> $seasons
+     */
+    private function getSeasonFromList(array $seasons, string $id): \BKuhl\BibleBowlTexts\Season
+    {
+        foreach ($seasons as $season) {
+            if ($season->getId() === $id) {
+                return $season;
+            }
+        }
+
+        $this->fail("Season {$id} not found in season list.");
     }
 }
