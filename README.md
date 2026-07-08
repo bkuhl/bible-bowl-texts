@@ -55,6 +55,37 @@ foreach ($memoryVersesFlattened as $verse) {
 }
 ```
 
+## Memory Verses
+
+Each memory verse in season JSON has a `lead_in` prompt and `split_after_word` — the word count after which the quizzer begins reciting. Use `MemoryVerseTextResolver` to fetch CSB text and `BibleBowlWordCounter` to split it.
+
+```php
+use BKuhl\BibleCSB\BookFactory;
+use BKuhl\BibleBowlTexts\BibleBowlWordCounter;
+use BKuhl\BibleBowlTexts\MemoryVerseTextResolver;
+use BKuhl\BibleBowlTexts\SeasonFactory;
+
+$factory = new SeasonFactory();
+$season = $factory->getSeasonById('18', SeasonFactory::PROGRAM_BEGINNER);
+
+$book = 44;
+$chapter = 1;
+$verseKey = '4-5'; // single verse, range, or comma list: "16", "3-4", "35,37"
+
+$meta = $season->getMemoryVerses()['books'][$book]['chapters'][$chapter]['verses'][$verseKey];
+$resolver = new MemoryVerseTextResolver(new BookFactory());
+$counter = new BibleBowlWordCounter();
+
+$text = $resolver->getCombinedText($book, $chapter, $verseKey);
+$split = $counter->splitAt($text, $meta['split_after_word']);
+
+// $meta['lead_in']     — QM prompt (not part of scripture text)
+// $split['lead_in']     — scripture read by QM
+// $split['answer']      — scripture recited by quizzer
+```
+
+Verse keys map to CSB text via `MemoryVerseReference::parse()`. Word counts follow Bible Bowl rules (e.g. `said,"you` counts as two words: `said,` and `"you`).
+
 ## Data Structure
 
 ### Directory Layout
