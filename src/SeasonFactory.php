@@ -100,7 +100,7 @@ class SeasonFactory
      *                           bookId => [
      *                               'chapters' => [
      *                                   chapterId => [
-     *                                       'verses' => [verse1, verse2, ...]
+     *                                       'verses' => [verseKey => ['lead_in' => string, 'split_after_word' => int], ...]
      *                                   ]
      *                               ]
      *                           ]
@@ -109,7 +109,7 @@ class SeasonFactory
      * 
      * @example
      * $memoryVerses = $factory->getMemoryVerses('16');
-     * $chapter16Verses = $memoryVerses['books'][9]['chapters'][16]['verses']; // [1, 7, 13, 18]
+     * $leadIn = $memoryVerses['books'][9]['chapters'][16]['verses']['7']['lead_in']; // 'about what the LORD sees'
      */
     public function getMemoryVerses(string $seasonId, ?string $program = null): ?array
     {

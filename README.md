@@ -5,7 +5,7 @@ A PHP library for managing Bible quiz text by seasons and blocks. This library g
 ## Features
 
 - **Multi-Program Support**: Separate data for Team and Beginner programs
-- **Memory Verses**: Support for memory verse collections with book, chapter, and verse references
+- **Memory Verses**: Memory verse collections with the quizmaster's lead-in and the recitation split point
 - **Efficient JSON Format**: Compatible with the [`bkuhl/scripture-ranges`](https://github.com/bkuhl/scripture-ranges) package format
 - **Multi-Book Support**: Can handle ranges spanning multiple books
 - **Direct Block Access**: Blocks are stored as objects keyed by number for O(1) lookup
@@ -46,7 +46,8 @@ echo $block['number']; // 1
 
 // Get memory verses (explicit structure)
 $memoryVerses = $factory->getMemoryVerses('16');
-$chapter16Verses = $memoryVerses['books']['9']['chapters']['16']['verses']; // [1, 7, 13, 18]
+$chapter16Verses = $memoryVerses['books']['9']['chapters']['16']['verses'];
+// ['1' => ['lead_in' => 'what the LORD said to Samuel', 'split_after_word' => 23], '7' => [...], ...]
 
 // Get memory verses (flattened structure)
 $memoryVersesFlattened = $factory->getMemoryVersesFlattened('16');
@@ -57,7 +58,22 @@ foreach ($memoryVersesFlattened as $verse) {
 
 ## Memory Verses
 
-Each memory verse in season JSON has a `lead_in` prompt and `split_after_word` — the word count after which the quizzer begins reciting. Use `MemoryVerseTextResolver` to fetch CSB text and `BibleBowlWordCounter` to split it.
+Each memory verse in season JSON is keyed by its verse key (`"16"`, `"3-4"`, or `"35,37"`) and has a `lead_in` prompt and `split_after_word` — the word count after which the quizzer begins reciting. Use `MemoryVerseTextResolver` to fetch CSB text and `BibleBowlWordCounter` to split it.
+
+### `lead_in` wording
+
+`lead_in` is printed verbatim after the reference, in the official question-set format:
+
+```
+Give Acts 3:6, what Peter said to a lame man, for 10 points each quoted segment or 5 points if close:
+```
+
+So it must be exactly the phrase the official question set prints between `Give <reference>,` and `, for 10 points`:
+
+- Copy it from the official source; don't paraphrase it.
+- Lower-case start, a complete phrase that reads naturally after `Give <reference>, ` — "about …", "when …", "what …", "after …" are all valid.
+- Include "about" only when the official text does; consumers don't add it.
+- No reference, "Give", scoring text, or leading/trailing punctuation.
 
 ```php
 use BKuhl\BibleCSB\BookFactory;
@@ -79,8 +95,8 @@ $counter = new BibleBowlWordCounter();
 $text = $resolver->getCombinedText($book, $chapter, $verseKey);
 $split = $counter->splitAt($text, $meta['split_after_word']);
 
-// $meta['lead_in']     — QM prompt (not part of scripture text)
-// $split['lead_in']     — scripture read by QM
+// $meta['lead_in']     — QM prompt, printed after "Give <reference>," (not scripture)
+// $split['lead_in']     — scripture read by QM before the quizzer recites
 // $split['answer']      — scripture recited by quizzer
 ```
 
@@ -178,13 +194,10 @@ The library generates efficient JSON files with the following structure:
             "9": {
                 "chapters": {
                     "16": {
-                        "verses": [1, 7, 13, 18]
-                    },
-                    "17": {
-                        "verses": [26, 36, 37, 45, 46, 47, 50]
-                    },
-                    "18": {
-                        "verses": [12, 30]
+                        "verses": {
+                            "1": { "lead_in": "what the LORD said to Samuel", "split_after_word": 23 },
+                            "7": { "lead_in": "about what the LORD sees", "split_after_word": 20 }
+                        }
                     }
                 }
             }
@@ -196,7 +209,7 @@ The library generates efficient JSON files with the following structure:
 ### Key Features of the JSON Format:
 
 - **Multi-Program Support**: Separate JSON files for Team and Beginner programs
-- **Memory Verses**: Explicit structure with books → chapters → verses hierarchy
+- **Memory Verses**: Explicit structure with books → chapters → verse keys, each holding its `lead_in` and `split_after_word`
 - **Efficient Chapter Ranges**: Uses single range objects for multi-chapter spans (e.g., chapters 16-24)
 - **Multi-Book Support**: Can represent ranges spanning multiple books
 - **Direct Block Access**: Blocks are keyed by number (`"1"`, `"2"`, `"3"`) for O(1) lookup
@@ -219,13 +232,13 @@ A simplified program with reduced text coverage and fewer memory verses, stored 
 - **Block 1**: 1 Samuel 16-19
 - **Block 2**: 1 Samuel 20-24  
 - **Block 3**: 1 Samuel 26-31
-- **Memory Verses**: 3 verses (1 Samuel 16:7, 17:45, 18:3)
+- **Memory Verses**: 45
 
 #### Beginner Program
 - **Text**: 1 Samuel 16-20
 - **Block 1**: 1 Samuel 16-18
 - **Block 2**: 1 Samuel 19-20
-- **Memory Verses**: 2 verses (1 Samuel 16:7, 17:45)
+- **Memory Verses**: 24
 
 ## Generating Season Data
 
